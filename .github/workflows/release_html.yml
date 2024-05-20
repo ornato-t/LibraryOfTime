@@ -13,11 +13,23 @@ jobs:
 
     - name: Move to actions directory
       run: cd ./actions
+    
+    - name: "Debug: Print Working Directory"
+      run: pwd
+    
+    - name: "Debug: Print Directory Contents"
+      run: ls
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.11'
+
+    - name: "Debug: Print Working Directory"
+      run: pwd
+    
+    - name: "Debug: Print Directory Contents"
+      run: ls
 
     - name: Install Dependencies
       run: pip install -r ./requirements.txt

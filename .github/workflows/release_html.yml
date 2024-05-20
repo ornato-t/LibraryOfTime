@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Move to actions directory
-      run: cd actions
+      run: cd ./actions
 
     - name: Set up Python
       uses: actions/setup-python@v2

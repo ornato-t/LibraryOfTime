@@ -17,7 +17,7 @@ jobs:
         python-version: '3.11'
 
     - name: Install Dependencies
-      run: pip install -r ./requirements.txt
+      run: pip install -r./requirements.txt
       working-directory: "./actions"
 
     - name: Generate HTML
@@ -30,7 +30,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: 1.0.0
+        tag_name: v1.${{github.run_attempt}}
         release_name: Minified code
         draft: false
         prerelease: false
